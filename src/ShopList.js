@@ -15,6 +15,12 @@ const ShopList = () => {
                 <Item />
                 <Item />
                 <Item />
+                <Item />
+                <Item />
+                <Item />
+                <Item />
+                <Item />
+                <Item />
             </div>
         </div>
     )

@@ -6,7 +6,7 @@ const Item = (props) => {
         <div className="item">
             <img src={monsterBlack}></img>
             <div className="item-info">
-                <h3>Monster Black</h3>
+                <h3>монстр)))</h3>
                 <p>Price: {props.price}</p>
             </div>
             <input className="numbers-input" type="number" placeholder="1"></input>
