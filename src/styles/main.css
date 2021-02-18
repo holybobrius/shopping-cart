@@ -44,7 +44,7 @@ h1 {
   transform: scale(1.05);
 }
 
-.h1-span {
+.teal-span {
   color: teal;
 }
 
@@ -84,4 +84,69 @@ h1 {
 
 label:hover {
   cursor: pointer;
+}
+
+.catalog-h1 {
+  margin: 20px 0px 0px 30px;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px 10px;
+}
+
+.item {
+  background-color: #2c2c2c;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.items-container {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 35px;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+p {
+  color: teal;
+  margin-bottom: 10px;
+}
+
+.numbers-input {
+  background-color: transparent;
+  outline: none;
+  border-style: none;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #aaa;
+  color: white;
+  height: 25px;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.add-button {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-left: 5px;
+  outline: none;
+  border-style: none;
+  font-size: 24px;
+  background-color: transparent;
+  border: 1px solid teal;
+  color: teal;
+  transition: 200ms ease;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: teal;
+  color: #212121;
+}
+
+.item-info {
+  margin-left: 5px;
 }
