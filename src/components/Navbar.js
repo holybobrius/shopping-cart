@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 
-const Navbar = () => {
+const Navbar = (props) => {
+
     return (
         <div className="navbar-div">
             <ul className="navbar">
@@ -16,7 +17,7 @@ const Navbar = () => {
                 </li>
                 <li className="navbar-item">
                     <a className="navbar-item-link" href="/cart">
-                        <label>Cart</label>
+                        <label>Cart: {props.cartItems}</label>
                     </a>
                 </li>
             </ul>
