@@ -96,14 +96,35 @@ const ShopList = () => {
     const [itemsCards, setItemsCards] = useState();
     const [cartItems, setCartItems] = useState(0);
 
+    const cart = [];
+
     let tempValue = 0;
 
     const handleSubmit = (e) => {
-        console.log(tempValue + " + " + Number(e.target.quantity.value));
         tempValue = Number(tempValue + Number(e.target.quantity.value));
         e.preventDefault();
         setCartItems(tempValue);
-        console.log("temp = " + tempValue + ". cartItems = " + cartItems)
+
+        let doesInclude = false;
+
+        cart.forEach((el) => {
+            if (el.name === e.target.name) {
+                el.quantity = el.quantity + Number(e.target.quantity.value);
+                doesInclude = true;
+            }
+        })
+
+        if(!doesInclude) {
+            const item = {
+                name: e.target.name,
+                quantity: Number(e.target.quantity.value),
+                price: e.target.price
+            }
+        cart.push(item);}
+
+        
+
+        console.log(cart);
     }
 
     useEffect(() => {
