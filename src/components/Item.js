@@ -15,7 +15,7 @@ const Item = (props) => {
             </div>
             <form onSubmit={props.onSubmit} name={props.name} data-price={props.price}>
                 <p name="price">Price: ${itemData.price}</p>
-                <input name="quantity" className="numbers-input" type="number" placeholder="1" required></input>
+                <input name="quantity" className="numbers-input" type="number" placeholder="1" min="1" required></input>
                 <input type="submit" className="add-button" value="+" ></input>
             </form>
         </div>
