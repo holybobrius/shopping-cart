@@ -93,32 +93,28 @@ const ShopList = () => {
         },
     ]
 
-    const [cartItems, setCartItems] = useState(0);
     const [itemsCards, setItemsCards] = useState();
-    const itemsInCart = [];
+    const [cartItems, setCartItems] = useState(0);
+
+    let tempValue = 0;
 
     const handleSubmit = (e) => {
+        console.log(tempValue + " + " + Number(e.target.quantity.value));
+        tempValue = Number(tempValue + Number(e.target.quantity.value));
         e.preventDefault();
-        console.log(e.target.name);
-        const item = {
-            name: e.target.name,
-            quantity: e.target.value,
-            price: e.target.price
-        }
-        itemsInCart.push(item);
-        setCartItems(itemsInCart.length);
-        console.log(itemsInCart);
+        setCartItems(tempValue);
+        console.log("temp = " + tempValue + ". cartItems = " + cartItems)
     }
 
     useEffect(() => {
             setItemsCards(items.map(item => 
                     <Item name={item.name} img={item.img} price={item.price} onSubmit={handleSubmit} key={item.id} />
             ))
-            console.log("hey");
         // eslint-disable-next-line react-hooks/exhaustive-deps
         }, []
     )
 
+    
     return(
         <div id="catalog-body">
             <Navbar cartItems={cartItems}/>
