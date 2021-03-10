@@ -118,9 +118,11 @@ const ShopList = () => {
             const item = {
                 name: e.target.name,
                 quantity: Number(e.target.quantity.value),
-                price: e.target.price
+                price: Number(e.target.dataset.price),
             }
-        cart.push(item);}
+            console.log(e.target.parentElement.dataset.price)
+            cart.push(item);
+        }
 
         
 
