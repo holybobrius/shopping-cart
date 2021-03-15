@@ -8,7 +8,6 @@ import {
 import App from "./App"
 import ShopList from "./ShopList"
 import Cart from "./Cart"
-import Navbar from "./components/Navbar"
 
 const Routes = () => {
 
@@ -47,11 +46,11 @@ const Routes = () => {
                 <Switch>
                     <Route exact path="/" component={App}/>
                     <Route exact path="/shop" render={(props) => (
-                        <ShopList {...props} test={true} getCartItems={getCartItems} />
+                        <ShopList {...props} test={true} getCartItems={getCartItems} getCart={getCart}/>
                     )}
                     />
                     <Route exact path="/cart" render={(props) => (
-                        <Cart {...props} getCart={getCart} cart={cart} />
+                        <Cart {...props}  cart={cart} />
                     )}
                     />
                 </Switch>

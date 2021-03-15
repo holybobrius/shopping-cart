@@ -127,8 +127,8 @@ const ShopList = (props) => {
         }
 
         
-
         console.log(cart);
+        props.getCart(cart)
     }
 
     useEffect(() => {
