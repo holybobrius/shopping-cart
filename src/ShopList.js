@@ -132,6 +132,7 @@ const ShopList = (props) => {
     }
 
     useEffect(() => {
+            console.log("произошел прикол")
             setItemsCards(items.map(item => 
                     <Item name={item.name} img={item.img} price={item.price} onSubmit={handleSubmit} key={item.id} />
             ))
