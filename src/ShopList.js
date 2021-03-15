@@ -16,7 +16,7 @@ import reign from "./images/reign.jpg"
 import tiger from "./images/tiger.jpg"
 import v from "./images/v.jpg"
 
-const ShopList = () => {
+const ShopList = (props) => {
 
     const items = [
         {
@@ -96,6 +96,7 @@ const ShopList = () => {
     const [itemsCards, setItemsCards] = useState();
     const [cartItems, setCartItems] = useState(0);
 
+
     const cart = [];
 
     let tempValue = 0;
@@ -104,6 +105,7 @@ const ShopList = () => {
         tempValue = Number(tempValue + Number(e.target.quantity.value));
         e.preventDefault();
         setCartItems(tempValue);
+        props.getCartItems(tempValue);
 
         let doesInclude = false;
 
@@ -140,7 +142,6 @@ const ShopList = () => {
     
     return(
         <div id="catalog-body">
-            <Navbar cartItems={cartItems}/>
             <h1 className="catalog-h1"><span className="teal-span">C</span>atalog</h1>
             <div className="items-container">
                 {itemsCards}

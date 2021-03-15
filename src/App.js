@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar"
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <div className="main-content">
         <h1>энергосы<span className="teal-span">)))</span></h1>
         <a href="/shop">
