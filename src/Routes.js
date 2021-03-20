@@ -18,6 +18,11 @@ const Routes = () => {
         setCartItems(itemsInCart)
     }
 
+
+    const setCurrentCart = (currentCart) => {
+        setCart(currentCart)
+    }
+ 
     const getCart = (cart) => {
         setCart(cart);
     } 
@@ -46,7 +51,7 @@ const Routes = () => {
                 <Switch>
                     <Route exact path="/" component={App}/>
                     <Route exact path="/shop" render={(props) => (
-                        <ShopList {...props} test={true} getCartItems={getCartItems} getCart={getCart}/>
+                        <ShopList {...props} test={true} setCurrentCart={setCurrentCart} getCartItems={getCartItems} getCart={getCart}/>
                     )}
                     />
                     <Route exact path="/cart" render={(props) => (

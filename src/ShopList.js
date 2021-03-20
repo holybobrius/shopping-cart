@@ -124,6 +124,7 @@ const ShopList = (props) => {
             }
             console.log(e.target.parentElement.dataset.price)
             cart.push(item);
+            props.setCurrentCart(cart);
         }
 
         
