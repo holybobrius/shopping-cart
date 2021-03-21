@@ -109,9 +109,9 @@ const ShopList = (props) => {
 
         let doesInclude = false;
 
-        cart.forEach((el) => {
+        props.cart.forEach((el) => {
             if (el.name === e.target.name) {
-                el.quantity = el.quantity + Number(e.target.quantity.value);
+                props.changeQuantity(el, Number(e.target.quantity.value))
                 doesInclude = true;
             }
         })
@@ -123,12 +123,11 @@ const ShopList = (props) => {
                 price: Number(e.target.dataset.price),
             }
             console.log(e.target.parentElement.dataset.price)
-            cart.push(item);
+            props.getCart(item);
         }
 
         
-        console.log(cart);
-        props.getCart(cart)
+        console.log("cart= " + cart);
     }
 
     useEffect(() => {
