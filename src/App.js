@@ -14,8 +14,7 @@ function App(props) {
           <button className="main-page-button">Go to Catalog</button>
         </a>
       </div>
-      <h2>{props.count}</h2>
-      <button onClick={props.handleClick}>Click</button>
+      
     </div>
   );
 }
